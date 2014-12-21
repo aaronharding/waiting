@@ -6,7 +6,7 @@
  * Waiting.start();
  * Waiting.stop();
  *
- * @author Aaron Harding <aaron.thomas.harding@googelmail.com>
+ * @author Aaron Harding <aaron.thomas.harding@googlemail.com>
  */
  var Waiting = (function(elem) {
 
