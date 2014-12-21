@@ -12,7 +12,7 @@
 
 	var public = {},
 		count = -1,
-		dots,
+		dots = 3,
 		running = false,
 		delay = 500,
 		container;
@@ -20,15 +20,14 @@
 	function step()
 	{
 		count++;
-    	$(container).html(new Array((count % 3) + 2).join('.'));
-		if(running) setTimeout(step, count % 3 == 2 ? 500 : 250);
+		$(container).html(new Array((count % dots) + 2).join('.'));
+		if(running) setTimeout(step, count % dots == 2 ? delay : delay / 2);
 	}
 
 	public.start = function()
 	{
 		if(running) return;
 		else running = true;
-		count = -1;
 		step();
 	}
 
